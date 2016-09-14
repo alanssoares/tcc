@@ -1,0 +1,197 @@
+\documentclass[font=plain]{abnt}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[title, abnt-etal-cite=3]{abntcite}
+\usepackage{graphicx}
+\usepackage{graphicx,color} 
+\usepackage{placeins} % para posicionamento das imagens
+\usepackage{paralist}
+\usepackage{subfloat} 
+\usepackage{subfig} 
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{scalefnt}
+\usepackage{algpseudocode,algorithm}
+\usepackage{amsmath,amsfonts}   % \mathbb, para fontes matematicas
+\usepackage{amssymb,amsthm}  
+\usepackage{verbatim}
+% Declaracoes em Português
+\algrenewcommand\algorithmicend{\textbf{fim}}
+\algrenewcommand\algorithmicdo{\textbf{faça}}
+\algrenewcommand\algorithmicwhile{\textbf{enquanto}}
+\algrenewcommand\algorithmicfor{\textbf{para}}
+\algrenewcommand\algorithmicif{\textbf{se}}
+\algrenewcommand\algorithmicthen{\textbf{então}}
+\algrenewcommand\algorithmicelse{\textbf{senão}}
+\algrenewcommand\algorithmicreturn{\textbf{devolve}}
+\algrenewcommand\algorithmicfunction{\textbf{função}}
+
+% Rearranja os finais de cada estrutura
+\algrenewtext{EndWhile}{\algorithmicend\ \algorithmicwhile}
+\algrenewtext{EndFor}{\algorithmicend\ \algorithmicfor}
+\algrenewtext{EndIf}{\algorithmicend\ \algorithmicif}
+\algrenewtext{EndFunction}{\algorithmicend\ \algorithmicfunction}
+
+% O comando For, a seguir, retorna 'para #1 -- #2 até #3 faça'
+\algnewcommand\algorithmicto{\textbf{até}}
+\algrenewtext{For}[3]%
+{\algorithmicfor\ #1 $\gets$ #2 \algorithmicto\ #3 \algorithmicdo}
+
+\instituicao{UNEB - Universidade do Estado da Bahia 
+             \par Departamento de Ciências Exatas e da Terra}
+\titulo{ \sf\textbf{Planejamento e mapeamento de trajetórias em tempo real para navegação de robôs humanóides em ambiente simulado 3D}}
+\autor{Alan dos Santos Soares}
+\orientador{Marco Antonio Costa Simões}
+\coorientador{Diego Gervasio Frías Suárez}
+
+\comentario{Trabalho de Conclusão de Curso apresentado a Universidade do Estado da Bahia como requisito parcial para obtenção do título de Bacharel em Sistemas de Informação.}
+\local{Rua Silveira Martins, 2555, Cabula, Salvador-BA}
+%esta data deve ficar estática após entrega final
+\data{\today}
+
+\begin{document}
+    \DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png,.bmp,.eps}
+    
+    % CAPA DA MONOGRAFIA 
+    \begin{center}
+      
+      %\capa % geracao de capa automatica
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[scale=0.3]{figuras/logouneb.png}
+	\end{figure}
+
+      %\vspace*{\fill}
+      
+      	\begin{center}
+	 %\ABNTchapterfont
+	 %\bfseries
+	 \sf{Universidade do Estado da Bahia \\}
+	 \sf{Departamento de Ci\^encias Exatas e da Terra \\}
+	 \sf{Bacharelado em Sistemas de Informação \\}
+	\end{center}
+      	
+	\vspace*{3 cm}
+
+	\begin{center}
+	 %\ABNTchapterfont
+	 %\bfseries
+	 \sf\Large\textbf{Planejamento e mapeamento de trajetórias em tempo real para navegação de robôs humanóides em ambiente simulado 3D}
+	\end{center}
+	
+	\vspace*{3 cm}
+
+	{\large \textbf{Alan dos Santos Soares}}
+
+	\begin{center}
+	\vspace*{\fill}
+	%\vspace*{0.5cm}
+	Rua Silveira Martins, 2555, Cabula, Salvador-BA
+	\par
+	13 de Julho de 2014
+	\vspace*{1cm}
+	\end{center}
+      
+    \end{center}
+    
+    % CONTRA CAPA DA MONOGRAFIA     
+    \folhaderosto % geracao de folha de rosto automatica
+
+    %Folha de Aprovação
+    \begin{folhadeaprovacao}
+    
+	\begin{center}
+
+	{\large \textbf{Alan dos Santos Soares}}
+	
+	\vspace*{\fill}\vspace*{\fill}
+	
+	\begin{center}
+	 %\ABNTchapterfont
+	 %\bfseries
+	 \sf\Large\textbf{Planejamento e mapeamento de trajetórias em tempo real para navegação de robôs humanóides em ambiente simulado 3D}
+	\end{center}
+
+	\vspace*{\fill}
+	
+	\hspace{.45\textwidth}
+	\begin{minipage}{.5\textwidth}
+	Trabalho de Conclusão de Curso apresentado a Universidade do Estado da Bahia como requisito parcial para obtenção do título de Bacharel em Sistemas de Informação.
+	\end{minipage}
+	
+	\end{center}
+	
+	Data de aprovação :
+	\setlength{\ABNTsignthickness}{0.4pt}
+	\setlength{\ABNTsignskip}{2cm}
+	\hspace*{1cm}
+	\assinatura{Prof. Marco Antonio Costa Simões\\MSc. em Ciência da Computação\\ Universidade do Estado da Bahia}
+	\assinatura{Prof. Diego Gervasio Frías Suárez\\PhD. em Modelagem Computacional\\ Universidade do Estado da Bahia}
+	\assinatura{Prof. Josemar Rodrigues de Souza\\PhD. em Informática\\ Universidade do Estado da Bahia}
+	
+	\begin{center}
+	\vspace*{\fill}
+	%\vspace*{0.5cm}
+	Rua Silveira Martins, 2555, Cabula, Salvador-BA
+	\par
+	13 de Junho de 2014
+	\vspace*{1cm}
+	\end{center}
+	
+	
+	
+    \end{folhadeaprovacao}
+    
+    \input{pretextuais/dedicatoria}
+    \input{pretextuais/agradecimentos}
+    \input{pretextuais/resumo}
+    \input{pretextuais/abstract}
+
+    \listadefiguras % geracao automatica da lista de figuras
+    \listadetabelas % geracao automatica da lista de tabelas
+    
+    \pretextualchapter{Lista de abreviaturas e siglas}
+    \begin{description}
+      \item[ACSO]{Núcleo de Arquitetura de Computadores e Sistemas Operacionais}
+      \item[DARPA]{Defense Advanced Research Projects Agency}
+      \item[IA]{Inteligencia Artificial}
+      \item[IAD]{Inteligencia Artificial Distribuida}
+      \item[OBR]{Olimpíada Brasileira de Robótica}
+      \item[PEAS]{Performance Environment Actuators Sensors}
+      \item[SMA]{Sistemas Multi-Agente}
+      \item[TDP]{Team Description Paper}
+    \end{description}
+    
+ %   \pretextualchapter{Lista de símbolos}
+ %   \begin{description}
+ %     \item[$ \pi $] Letra grega pi
+ %     \item[$ \Pi $] Letra grega pi
+ %   \end{description}
+    
+    \pretextualchapter{Lista de algoritmos}
+    \begin{description}
+      \item[$ 3.1 $] Implementação da verificação da presença de obstáculos . . . . . . . . . . . . .  p.35
+      \item[$ 3.2 $] Implementação da predição de colisão . . . . . . . . . . . . . . . . . . . . . . . .  p.41
+    \end{description}
+    
+    \sumario
+    \input{conteudo/introducao}
+    \input{conteudo/fundamentacao}
+    \input{conteudo/desenvolvimento}
+    \input{conteudo/resultados}
+    \input{conteudo/conclusao}
+
+    %\input{cronograma/cronograma}
+ 
+    \citeoption{abnt-etal-cite=10}
+
+    \bibliography{referencias}
+
+    % Apêndice e Anexos
+    %\apendice
+    %\input{postextuais/apendice}
+    %\anexo
+    %\input{postextuais/anexo}
+    
+\end{document}

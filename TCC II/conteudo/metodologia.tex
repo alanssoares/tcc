@@ -1,0 +1,20 @@
+
+\chapter{Metodologia}
+\label{chap:metodo}
+
+Primeiramente será realizado uma especificação PEAS \cite{brussel} do ambiente do jogo de futebol de robôs simulados 3D, para identificar quais fatores influenciam na 
+tomada de decisão do agente na identificação da melhor trajetória a ser seguida e no mapeamento preditivo dos obstáculos presentes no ambiente. Logo em seguida será 
+realizado um estudo sobre mapeamento e localização, planejamento de trajetórias, planejamento multiagente, coordenação multiagente e predição de colisão. 
+
+A partir do estudo realizado, será desenvolvido um modelo para realizar o mapeamento dos obstáculos do campo no jogo de futebol de robos simulados 3D e identificar quais obstáculos 
+devem ser levados em consideração com base no estado do ambiente e calcular as possíveis trajetórias dos obstáculos com base na sua velocidade
+e direção em função do tempo para predizer os possíveis pontos de colisão.
+
+O modelo deve identificar trajetórias ótimas em tempo real, para que o agente do time BahiaRT utilize em qualquer situação de jogo na identificação do melhor caminho a ser 
+seguido para realizar uma jogada, que pode ser tanto uma jogada de passe, onde o agente deve lançar a bola em uma posição estratégica para que outro agente aliado receba a bola, 
+ou como percorrer o caminho escolhido para alcançar o seu objetivo.
+
+O trabalho será desenvolvido em ambiente simulado 3D do servidor Simspark (servidor oficial da liga de simulação 3D) e monitor Roboviz,
+que são plataformas para jogo de futebol simulado que utiliza robôs NAO. A validação do modelo proposto será realizado com o time 
+BahiaRT do grupo 3D do ACSO (Núcleo de Arquitetura de Computadores e Sistemas Operacionais) e com outros times da liga de simulação 3D
+que participam do campeonato mundial de robótica utilizando como criterio de teste, a escolha da melhor trajetória para efetuar um passe em diversas situacoes.

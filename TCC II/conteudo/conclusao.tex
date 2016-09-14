@@ -1,0 +1,30 @@
+\chapter{Considerações Finais}
+\label{chap:conclusao}
+
+A construção de agentes bípedes aut\^onomos não é uma tarefa trivial. Além 
+do comportamento de baixo nível que é representado por movimentos como andar, levantar os braços, chutar uma bola, 
+é necessário desenvolver o comportamento de alto nível, onde o agente deve analisar as informações que possui, e 
+a partir delas escolher a melhor ação a ser executada.
+
+Este trabalho apresentou o desenvolvimento de um modelo para realizar o mapeamento e planejamento 
+de trajetórias em tempo real para nagevação de agentes humanóides em ambiente simulado 3D. O objetivo 
+do trabalho foi ter um modelo que possa ser utilizado no desenvolvimento de aplicações que 
+requerem uma resposta rápida e ao mesmo tempo segura para guiar um agente através de um ambiente din\^amico. Como exemplo, podemos citar o resgate de pessoas em acidentes 
+de desabamento, um agente inteligente deve ser capaz de se locomover no meio de destroços de concreto e buscar os 
+melhores caminhos para chegar até a vítima de forma segura. Outra aplicação possível é a contrução de 
+robôs de serviços que precisam navegar em ambientes onde prestarão serviços diversos aos humanos de forma 
+segura e eficaz.
+
+O modelo foi desenvolvido utilizando a linguagem C++, que é utilizada pelo time BahiaRT. Além disso, outras ferramentas 
+como o Scilab, foi utilizada no desenvolvimento do algoritmo descrito na seção \ref{sec:calcvel}. 
+
+Uma das contribuições trabalho é o Trainer3D. Esta ferramenta poderá ser utilizada por outros times da liga de simulação 3D 
+para realizar testes, coletar indicadores de desempenho e automatizar o processo de otimização.
+
+A validação do modelo se deu através do desenvolvimento de uma aplicação de passe. Esta aplicação foi escolhida 
+para aumentar o nível estratégico do time BahiaRT, proporcionando jogadas que aumentem as chances de gol. Além disso, 
+uma das principais motivações foi o principal campeonato mundial de futebol de rob\^os, a RoboCup.
+
+Como trabalho futuro, a resolução dos problemas identificados no desenvolvimento da aplicação de passe se viu necessária. 
+Estas influenciam diretamente a execução do passe no futebol robótico. Dentre os trabalhos, o desenvolvimento de um chute 
+din\^amico é um trabalho imprescindível, pois engloba o rápido posicionamento para realizar um chute para qualquer direção.

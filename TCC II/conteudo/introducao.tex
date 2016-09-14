@@ -1,0 +1,65 @@
+%---------- Primeiro Capitulo ----------
+\chapter{Introdu\c{c}\~ao}
+%Faça a justificativa desse tema. Por quais motivos essa pesquisa é relevante e importante? Apresente argumentos que justificam a importância da pesquisa no âmbito do seu campo de conhecimento e a relevância social do estudo (motivos e relevância da escolha do tema, levando em conta formação pessoal e pertinência/ contribuição acadêmica).
+Um dos principais desafios no campo da robótica, é a forma como os agentes humanóides buscam uma trajetória para chegar a 
+um determinado objetivo. No ambiente em que o agente está atuando existem diversos obstáculos que podem comprometer 
+a sua locomoção no ambiente, principalmente se os obstáculos não forem estáticos.
+
+Assim como o futebol de robôs, o desenvolvimento de veículos autônomos, designado como qualquer veículo com capacidade de
+transporte de pessoas ou bens sem a utilização de um condutor humano, é um dos desafios que requerem o planejamento e mapeamento de 
+trajetórias em tempo real para evitar colisão com obstáculos móveis da mesma forma que o futebol de robôs.
+
+A construção de veículos terrestres
+autônomos tem como principais objetivos, reduzir os acidentes de trânsito provocados por fatores humanos, aumentar a produtividade 
+e otimizar os recursos veiculares através da utilização adequada de componentes. Para fomentar e estimular pesquisas no 
+desenvolvimento de veículos autônomos, desafios como o DARPA Urban Challenge e o DARPA Grand Challenge foram criados \cite{darpa}.
+
+Outro desafio hoje em destaque é o desenvolvimento de robôs de serviço. Estes são robôs autônomos capazes de se mover em um ambiente 
+dinâmico para realizar tarefas úteis para o bem estar de humanos e a preservação de equipamentos físicos, necessitando planejar uma 
+trajetória de forma eficiente e segura, evitando causar acidentes. Segundo \citeonline{dudek} e \citeonline{siegwart}, o estudo das
+questões computacionais envolvidas na movimentação não supervisionada de robôs é fundamental para se obter sucesso no 
+desenvolvimento de agentes capazes de atuarem em ambientes dinâmico e contínuo.
+
+%O principal problema dos planejadores de trajetórias atuais, é que foram desenvolvidos para ambientes estáticos\cite{}, o que implica no
+%não funcionamento quando este é utilizado em um ambiente dinâmico e contínuo, onde o resultado das ações não é determinístico. A partir 
+%dessa lacuna, o estudo sobre a predição de estados do ambiente e dos obstáculos em sua volta em função de suas
+%ações realizadas e da análise do comportamento dos obstáculos permite uma maior mobilidade do agente.
+
+Para fomentar a investigação, uma organização internacional chamada RoboCup \cite{robocup} foi formada. O objetivo é promover e estimular 
+pesquisas nas áreas de Inteligência Artificial Distribuída (IAD) e Robótica Inteligente, colocando problemas de investigação distintos 
+, mas ao mesmo tempo interrelacionados.
+
+A sub-liga da RoboCup, Simulação 3D \cite{SimulationLeague}, primeira dentre as simuladas a representar um robô humanóide em sua 
+competição, tem como desafio padrão o futebol de robôs, dispondo de um vasto conjunto de desafios aos investigadores. Tais desafios 
+como  desenvolvimento do controle de baixo nível de robôs humanóides e a criação de comportamentos básicos e eficiêntes como levantar 
+e correr são essenciais para se ter um time competitivo. Algumas das características do domínio e desafios associados mais 
+importantes colocados pelo simulador incluem simulação em tempo real, modelo energético realista, comunicação pouco confiável e 
+com baixa largura de banda, percepção e ações assíncronas, ambiente multi-objetivo, parcialmente cooperativo e parcialmente 
+adverso \cite{bReis2001}. O futebol de robôs configura-se, portanto, como uma plataforma universal 
+para testes avançados em robótica autônoma com possibilidades em aplicações em diversas áreas.
+
+%Objetivo
+Este trabalho tem como objetivo propor e validar um modelo de mapeamento e planejamento de trajetórias de agentes humanóides no
+ambiente simulado 3D no contexto de jogo de futebol de robôs utilizando o time base BahiaRT do grupo de pesquisa 
+ACSO (Nucleo de Arquitetura de Computadores e Sistemas Operacionais) da UNEB. O time possui uma parceria com 
+time FCPortugal (FEUP-LIACC / Univ. Aveiro) de agentes simulados 3D, que tem como objetivo construir agentes 
+totalmente autônomos e inteligentes e vencer a sub-liga 3D da RoboCup.
+
+Para validar o modelo proposto, uma aplicação de passe foi desenvolvida. Este tem como objetivo ser utilizado para gerar situações 
+estratégicas que aumentem a chance de uma jogada bem sucedida. Porém, o sucesso de um passe depende não somente da escolha da melhor
+trajetória da bola, mais também da predição de interceptação da bola e de comportamentos básicos eficientes como se posicionar e 
+chutar a bola.
+
+O estudo e desenvolvimento do projeto na área de robôs humanóides simulados, atende à necessidade estratégica
+de continuar criando competências e desenvolvendo {\it know-how} próprio no estado da Bahia e no país na área de robótica autônoma. Este 
+contribui para não sermos, em um futuro imediato, meros consumidores de tecnologia desenvolvida em outros estados e outros países.
+
+Este trabalho está dividido em 5 capítulos. O Capítulo 2 se refere aos conceitos teóricos do problema e uma descrição do futebol 
+de robôs.
+
+No Capítulo 3 são descritos os trabalhos correlatos, o objetivo do trabalho, a metodologia utilizada e o modelo desenvolvido.
+
+No Capítulo 4 é apresentada a descrição da metodologia de teste utilizada, a arquitetura do ambiente de teste, as métricas utilizadas 
+para avaliar o modelo e os resultados obtidos.
+
+Por último, o Capítulo 5 descreve as considerações finais e os trabalhos futuros.
